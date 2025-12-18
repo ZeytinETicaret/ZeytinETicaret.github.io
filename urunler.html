@@ -1,49 +1,403 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="zeytin.png"> 
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ZeytinETicaret</title>
+    <title>Sepet</title>
     <style>
-
-    
-
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            background: #f5f5f5;
         }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #a6a4a4;
+
+        .sepet-container {
+            width: 80%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: #fff;
+        }
+
+        img {
+            width: 60px;
+            border-radius: 6px;
+        }
+
+        .adet-input {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .sil-btn {
+            background: #e63946;
             color: white;
-           
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
         }
-        header img {
-            height: 150px;+
+
+        .sil-btn:hover {
+            background: #c1121f;
         }
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            margin: 0;
-  
+
+        .toplam-alan {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .ode-btn {
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .ode-btn:hover {
+            background: #21867a;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ZeytinETicaret</h1>
+<div class="sepet-container">
+    <h2>Ürünler</h2>
 
-</header>
-</head>
-<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Adı</th>
+            <th>Tanımı</th>
+            <th>Fiyatı</th>
+            <th>Yıldız Sayisi</th>
+            <th>Kayıt Tarihi</th>
+            <th>Stok durumu</th>
+            <th>Stok sayısı</th>
+            <th>Yildiz Veren Üye Sayısı</th>
+            <th>Güncelleme Tarihi</th>
+            <th>Kategori ID</th>
+            <th>Urun Resmi</th>
+        </tr>
+
+        <tr>
+            <td>40</td>
+           <td>Zeytin Ezmesi</td>
+            <td>Gıda</td>
+            <td>123,49</td>
+            <td>12</td>
+            <td>12.01.2025</td>
+            <td>Doğru</td>
+            <td>65</td>
+            <td>3</td>
+            <td>12.02.2025</td>
+            <td>13</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+        </tr>
+            <tr>
+            <td>41</td>
+            <td>Kırma Yeşil Zeytin</td>
+              <td>Gıda</td>
+            <td>276,99</td>
+            <td>12</td>
+            <td>12.01.2025</td>
+            <td>Yanlış</td>
+            <td>0</td>
+            <td>12</td>
+            <td>12.02.2025</td>
+            <td>1</td>
+            <td><img src="urun1.jpeg"></td>
+         
+        </tr>
+
+        <tr>
+            <td>43</td>
+               <td>Kahvaltılık Zeytin Sosu</td>
+              <td>Gıda</td>
+            <td>345,99</td>
+            <td>7</td>
+            <td>1.12.2025</td>
+            <td>Doğru</td>
+            <td>122</td>
+            <td>19</td>
+            <td>3.12.2025</td>
+            <td>13</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+        
+           <tr>
+            <td>44</td>
+             <td>Siyah Zeytin</td>
+              <td>Gıda</td>
+            <td>259,99</td>
+            <td>5</td>
+            <td>12.03.2025</td>
+            <td>Doğru</td>
+            <td>1876</td>
+            <td>15</td>
+            <td>11.02.2025</td>
+            <td>1</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+           <tr>
+            <td>45</td>
+              <td>Yeşil Zeytin</td>
+              <td>Gıda</td>
+            <td>359,99</td>
+            <td>8</td>
+            <td>12.06.2025</td>
+            <td>Doğru</td>
+            <td>3456</td>
+            <td>26</td>
+            <td>13.07.2025</td>
+            <td>1</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+           <tr>
+            <td>46</td>
+            <td>Natürel Sızma Yağ</td>
+           <td>Yağ</td>
+            <td>779,99</td>
+            <td>9</td>
+            <td>11.10.2025</td>
+            <td>Yanlış</td>
+            <td>12</td>
+            <td>23</td>
+            <td>11.12.2025</td>
+            <td>12</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+           <tr>
+            <td>47</td>
+             <td>Biberli Zeytin Ezmesi</td>
+           <td>Gıda</td>
+            <td>199,99</td>
+            <td>11</td>
+            <td>11.11.2025</td>
+            <td>Doğru</td>
+            <td>1234</td>
+            <td>13</td>
+            <td>12.12.2025</td>
+            <td>13</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+           <tr>
+            <td>51</td>
+              <td>5L ZeytinYağı</td>
+           <td>Yağ</td>
+            <td>1299,99</td>
+            <td>10</td>
+            <td>11.11.2025</td>
+            <td>Doğru</td>
+            <td>345</td>
+            <td>21</td>
+            <td>12.12.2025</td>
+            <td>15</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+           <tr>
+            <td>52</td>
+               <td>10Kg Zeytin</td>
+           <td>Gıda</td>
+            <td>679,99</td>
+            <td>6</td>
+            <td>10.12.2025</td>
+            <td>Yanlış</td>
+            <td>223</td>
+            <td>9</td>
+            <td>20.10.2025</td>
+            <td>15</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+           <tr>
+            <td>53</td>
+                <td>Zeytinli Arap Sabunu</td>
+           <td>Diğer</td>
+            <td>129,99</td>
+            <td>8</td>
+            <td>1.01.2025</td>
+            <td>Doğru</td>
+            <td>12</td>
+            <td>25</td>
+            <td>2.02.2025</td>
+            <td>4</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+         <tr>
+            <td>54</td>
+            <td>Zeytin Yağlı Şampuan</td>
+            <td>Şampuan</td>
+            <td>89,99</td>
+            <td>3</td>
+            <td>1.12.2025</td>
+            <td>Doğru</td>
+            <td>123</td>
+            <td>20</td>
+            <td>13.01.2025</td>
+            <td>14</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+
+        <tr>
+            <td>55</td>
+            <td>Zeytin Özlü Cilt Serumu</td>
+            <td>Bakım</td>
+            <td>49,99</td>
+            <td>6</td>
+            <td>3.03.2025</td>
+            <td>Doğru</td>
+            <td>23</td>
+            <td>12</td>
+            <td>4.04.2025</td>
+            <td>14</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>Zeytin Yağlı Saç Kremi</td>
+            <td>Bakım</td>
+            <td>99,99</td>
+            <td>5</td>
+            <td>1.12.2025</td>
+            <td>Yanlış</td>
+            <td>77</td>
+            <td>15</td>
+            <td>14.01.2025</td>
+            <td>14</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td>Organik Zeytin Yağı</td>
+            <td>Yağ</td>
+            <td>999,99</td>
+            <td>10</td>
+            <td>27.02.2025</td>
+            <td>Yanlış</td>
+            <td>0</td>
+            <td>22</td>
+            <td>30.03.2025</td>
+            <td>12</td>
+            <td><img src="urun1.jpeg"></td>
+        </tr>
+        <tr>
+        <td>59</td>
+            <td>Gemlik Zeytini</td>
+            <td>Gıda</td>
+            <td>129,99</td>
+            <td>6</td>
+            <td>25.02.2025</td>
+            <td>Doğru</td>
+            <td>103</td>
+            <td>17</td>
+            <td>27.06.2025</td>
+            <td>1</td>
+            <td><img src="urun1.jpeg"></td>
+            </tr>
+            <td>60</td>
+            <td>Dolma Zeytin</td>
+            <td>Gıda</td>
+            <td>89,99</td>
+            <td>5</td>
+            <td>4.04.2025</td>
+            <td>Doğru</td>
+            <td>29</td>
+            <td>13</td>
+            <td>5.05.2025</td>
+            <td>1</td>
+            <td><img src="urun1.jpeg"></td>
+            <tr>
+            <td>61</td>
+            <td>Soğuk Sıkma Zeytinyağı</td>
+            <td>Yağ</td>
+            <td>459,99</td>
+            <td>4</td>
+            <td>7.07.2025</td>
+            <td>Yanlış</td>
+            <td>12</td>
+            <td>11</td>
+            <td>8.08.2025</td>
+            <td>12</td>
+            <td><img src="urun1.jpeg"></td>
+            </tr>
+            <tr>
+            <td>62</td>
+            <td>Kahvaltılık Zeytin Sos</td>
+            <td>Sos</td>
+            <td>123,99</td>
+            <td>3</td>
+            <td>13.09.2025</td>
+            <td>Doğru</td>
+            <td>105</td>
+            <td>18</td>
+            <td>16.10.2025</td>
+            <td>13</td>
+            <td><img src="urun1.jpeg"></td>
+            </tr>
+               <tr>
+            <td>63</td>
+            <td>ZeytinYağlı Yüz Kremi</td>
+            <td>Bakım</td>
+            <td>39,99</td>
+            <td>6</td>
+            <td>18.11.2025</td>
+            <td>Doğru</td>
+            <td>11</td>
+            <td>19</td>
+            <td>19.12.2025</td>
+            <td>14</td>
+            <td><img src="urun1.jpeg"></td>
+            </tr>
+            <tr>
+            <td>64</td>
+            <td>Zeytin Yaprağı Ekstresi</td>
+            <td>Diğer</td>
+            <td>109,99</td>
+            <td>8</td>
+            <td>12.12.2025</td>
+            <td>Doğru</td>
+            <td>109</td>
+            <td>23</td>
+            <td>13.12.2025</td>
+            <td>4</td>
+            <td><img src="urun1.jpeg"></td>
+            </tr>
+
     
+
+        
+    </table>
+
+    <div class="toplam-alan">
+        <strong>Genel Toplam: 1297 ₺</strong><br>
+        <button class="ode-btn">Ödemeye Geç</button>
+    </div>
+</div>
+
 </body>
 </html>
