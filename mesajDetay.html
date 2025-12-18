@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="zeytin.png"> 
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ZeytinETicaret</title>
+    <title>Mesaj Detayları</title>
     <style>
-
-    
-
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            background: #f5f5f5;
         }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #a6a4a4;
-            color: white;
-           
+
+        .container {
+            width: 95%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
         }
-        header img {
-            height: 150px;+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            margin: 0;
-  
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: #fff;
+        }
+
+        td.metin {
+            text-align: left;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ZeytinETicaret</h1>
+<div class="container">
+    <h2>Mesaj Detay Listesi</h2>
 
-</header>
-</head>
-<body>
-    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Metin</th>
+            <th>Mesaj ID</th>
+            <th>Yazılma Tarihi</th>
+            <th>Güncellenme Tarihi</th>
+            <th>Mesaj Gönderen Üye ID</th>
+            <th>Mesaj Alan Üye ID</th>
+            <th>Okundu Mu</th>
+        </tr>
+
+        <tr><td>3</td><td class="metin">Siparişim ne zaman kargoya verilecek?</td><td>1</td><td>11.11.2025 00:00</td><td>12.12.2025 00:00</td><td>1</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>4</td><td class="metin">Hangi zeytini kahvaltı için önerirsiniz?</td><td>3</td><td>11.11.2025 00:00</td><td>12.11.2025 00:00</td><td>4</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>7</td><td class="metin">Restoranım için toplu zeytin alımı yapmak istiyorum, indirim var mı?</td><td>4</td><td>11.03.2025 00:00</td><td>4.12.2025 00:00</td><td>3</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>8</td><td class="metin">5 litrelik naturel sızma zeytinyağının güncel fiyatı nedir?</td><td>5</td><td>13.01.2025 00:00</td><td>17.02.2025 00:00</td><td>11</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>9</td><td class="metin">Az tuzlu salamura tercih ediyorum, öneriniz var mı?</td><td>6</td><td>1.01.2025 00:00</td><td>2.02.2025 00:00</td><td>10</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>10</td><td class="metin">Yeni ürünleriniz ne zaman satışa sunulacak</td><td>7</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>16</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>12</td><td class="metin">Yakın zamanda zeytinyağı için kampanya olacak mı</td><td>8</td><td>11.05.2025 00:00</td><td>12.06.2025 00:00</td><td>18</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>13</td><td class="metin">Kargo gecikti, ne zaman teslim edilir</td><td>9</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>27</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>14</td><td class="metin">Siyah zeytin fiyatlarında artış olacak mı</td><td>10</td><td>11.11.2025 00:00</td><td>12.12.2025 00:00</td><td>29</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>15</td><td class="metin">Biberli zeytin ezmesi bana biraz acı geldi</td><td>11</td><td>10.10.2025 00:00</td><td>13.10.2025 00:00</td><td>28</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>16</td><td class="metin">Restoran için toplu siyah zeytin alımı yapmak istiyoruz</td><td>12</td><td>1.01.2025 00:00</td><td>2.02.2025 00:00</td><td>7</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>18</td><td class="metin">Kırma yeşil zeytin stoklara ne zaman girer</td><td>13</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>6</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>19</td><td class="metin">Yeşil zeytine verdiğim puan sistemde görünmüyor</td><td>14</td><td>12.12.2025 00:00</td><td>17.12.2025 00:00</td><td>33</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>20</td><td class="metin">Daha az tuzlu bir alternatif var mı</td><td>15</td><td>19.11.2025 00:00</td><td>20.11.2025 00:00</td><td>3</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>21</td><td class="metin">Restoranımız için zeytin ezmesi tedarik etmek istiyoruz</td><td>16</td><td>20.10.2025 00:00</td><td>11.11.2025 00:00</td><td>32</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>22</td><td class="metin">Siyah zeytin için yurt dışına ihracat yapıyor musunuz</td><td>18</td><td>29.11.2025 00:00</td><td>30.11.2025 00:00</td><td>24</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>23</td><td class="metin">Tansiyon hastaları için uygun mudur</td><td>19</td><td>19.09.2025 00:00</td><td>27.11.2025 00:00</td><td>4</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>25</td><td class="metin">Toplu alım grubu oluşturmak istiyoruz.</td><td>20</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>7</td><td>35</td><td>YANLIŞ</td></tr>
+        <tr><td>26</td><td class="metin">Kahvaltılık zeytin tadımı çok lezzetliydi</td><td>21</td><td>19.05.2025 00:00</td><td>23.06.2025 00:00</td><td>1</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>27</td><td class="metin">Sağlık açısından önerilen miktar nedir?</td><td>22</td><td>1.01.2025 00:00</td><td>12.01.2025 00:00</td><td>26</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>28</td><td class="metin">Kampanya çok ilgimizi çekti</td    ><td>23</td><td>19.08.2025 00:00</td><td>29.09.2025 00:00</td><td>27</td><td>35</td><td>DOĞRU</td></tr>
+        <tr><td>29</td><td class="metin">Fiyat–performans açısından oldukça iyi.</td><td>24</td><td>11.11.2025 00:00</td><td>12.11.2025 00:00</td><td>15</td><td>35</td><td>YANLIŞ</td></tr>
+    </table>
+</div>
+
 </body>
 </html>
