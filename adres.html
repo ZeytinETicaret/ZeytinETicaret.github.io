@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Kategoriler</title>
+<title>Adres/Lokasyon Listesi</title>
 
 <style>
 body {
@@ -42,16 +42,22 @@ th {
 tr:nth-child(even) {
     background: #f2f2f2;
 }
+.table-wrap{
+    max-height: 500px;   /* Burayı geçince */
+    overflow-y: auto;    /* dikey scroll çıkar */
+}
+
 
 
 </style>
 </head>
 
 <body>
+    
 
 <div class="container">
 <h2>Adres / Lokasyon Listesi</h2>
-
+<div class="table-wrap">
 <table>
 <tr>
     <th>ID</th>
