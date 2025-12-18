@@ -532,26 +532,27 @@ function odemeGec() {
 }
 </script>
 <script>
-function sepeteEkle(urunAdi, fiyat) {
+function sepeteEkle(urunAdi, fiyat){
     let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
 
-    // aynı ürün varsa adet artır
-    let bulunan = sepet.find(u => u.urun === urunAdi);
-    if (bulunan) {
+    let bulunan = sepet.find(u => u.ad === urunAdi);
+
+    if(bulunan){
         bulunan.adet++;
-    } else {
-        sepet.push({ urun: urunAdi, fiyat: fiyat, adet: 1 });
+    }else{
+        sepet.push({
+            ad: urunAdi,
+            fiyat: fiyat,
+            adet: 1
+        });
     }
 
     localStorage.setItem("sepet", JSON.stringify(sepet));
     alert("✅ Ürün sepete eklendi");
 }
-
-function odemeGec() {
-    window.location.href = "sepet.html";
-}
-</script>
+</script>>
 
 
 </body>
 </html>
+
