@@ -82,13 +82,22 @@ tr:nth-child(even){
     text-align:right;
 }
 
-.checkout button{
-    padding:10px 20px;
-    border:none;
-    background:#222;
-    color:#fff;
-    cursor:pointer;
-    border-radius:5px;
+.checkout-btn{
+    display: block;
+    margin: 25px auto 0;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #111, #333);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,.3);
+}
+.checkout-btn:active{
+    transform: scale(0.97);
 }
 </style>
 </head>
@@ -142,15 +151,24 @@ tr:nth-child(even){
     Toplam: <span id="total">0.00</span> ₺
 </div>
 
-<div class="checkout">
-    <button onclick="alert('Ödeme sayfasına yönlendiriliyorsunuz (göstermelik)')">
-        Ödemeye Geç
-    </button>
+<button class="checkout-btn" onclick="odemeGec()">
+    💳 Ödemeye Geç
+</button>
 </div>
 
 </div>
 
 <script>
+    function odemeGec(){
+    let toplam = document.getElementById("total").innerText;
+
+    if(toplam == "0.00"){
+        alert("❌ Sepet boş, ödeme yapılamaz!");
+        return;
+    }
+
+    window.location.href = "odeme.html";
+}
 function changeQty(btn, change){
     let row = btn.closest("tr");
     let qtyInput = row.querySelector(".qty");
