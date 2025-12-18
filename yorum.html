@@ -1,49 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="zeytin.png"> 
+<meta charset="UTF-8">
+<title>Yorumlar</title>
 
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f5f5f5;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ZeytinETicaret</title>
-    <style>
+    .container{
+        width:85%;
+        margin:40px auto;
+        background:#fff;
+        padding:20px;
+        border-radius:8px;
+    }
 
-    
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #a6a4a4;
-            color: white;
-           
-        }
-        header img {
-            height: 150px;+
-        }
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            margin: 0;
-  
-        }
-    </style>
+    .table-wrap{
+        max-height:500px;
+        overflow-y:auto;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+        font-size:14px;
+    }
+
+    th, td{
+        padding:10px;
+        border-bottom:1px solid #ddd;
+        text-align:center;
+    }
+
+    th{
+        background:#222;
+        color:#fff;
+        position:sticky;
+        top:0;
+    }
+
+    tr:nth-child(even){
+        background:#f2f2f2;
+    }
+
+    tr:hover{
+        background:#e6e6e6;
+    }
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>ZeytinETicaret</h1>
+<div class="container">
+<h2>Ürün Yorumları</h2>
 
-</header>
-</head>
-<body>
-    
+<div class="table-wrap">
+<table>
+<tr>
+    <th>ID</th>
+    <th>Metin</th>
+    <th>Üye ID</th>
+    <th>Ürün ID</th>
+    <th>Yazılma Tarihi</th>
+    <th>Güncelleme Tarihi</th>
+</tr>
+
+<tr><td>2</td><td>Lezzeti harika, tekrar alacağım.</td><td>24</td><td>40</td><td>11.11.2025</td><td>12.12.2025</td></tr>
+<tr><td>5</td><td>Biraz pahalı ama değiyor.</td><td>1</td><td>41</td><td>1.01.2025</td><td>2.02.2025</td></tr>
+<tr><td>6</td><td>Paketleme başarılı, kargo hızlı.</td><td>5</td><td>45</td><td>3.07.2025</td><td>4.08.2025</td></tr>
+<tr><td>9</td><td>Kalitesi beklediğimden daha güzel.</td><td>7</td><td>52</td><td>1.04.2025</td><td>5.05.2025</td></tr>
+<tr><td>10</td><td>Çok iyi, herkese tavsiye ederim.</td><td>11</td><td>61</td><td>12.04.2025</td><td>17.07.2025</td></tr>
+<tr><td>11</td><td>Yeşil zeytin iri ve lezzetli süperdi.</td><td>10</td><td>45</td><td>19.09.2025</td><td>21.09.2025</td></tr>
+<tr><td>12</td><td>Biraz pahalı ama doğal ve katkısız oluşu değiyor.</td><td>5</td><td>57</td><td>3.03.2025</td><td>9.03.2025</td></tr>
+<tr><td>13</td><td>Salamura zeytin tuzu tam kararında.</td><td>3</td><td>45</td><td>18.04.2025</td><td>23.04.2025</td></tr>
+<tr><td>14</td><td>Kargo hızlıydı, ürünler sağlam geldi.</td><td>33</td><td>62</td><td>1.01.2025</td><td>8.01.2025</td></tr>
+<tr><td>15</td><td>Soğuk sıkım zeytinyağı gerçekten kaliteli.</td><td>1</td><td>61</td><td>2.02.2025</td><td>9.02.2025</td></tr>
+<tr><td>16</td><td>Zeytinler çok taze, kahvaltının vazgeçilmezi.</td><td>5</td><td>44</td><td>11.11.2025</td><td>13.11.2025</td></tr>
+<tr><td>17</td><td>Ambalaj çok özenliydi, sızdırma olmadı.</td><td>27</td><td>51</td><td>25.01.2025</td><td>31.01.2025</td></tr>
+<tr><td>18</td><td>Zeytin ezmesi çok lezzetli hemen bitti.</td><td>24</td><td>40</td><td>13.04.2025</td><td>17.04.2025</td></tr>
+<tr><td>19</td><td>Biraz tuzlu geldi ama genel olarak kaliteli.</td><td>11</td><td>45</td><td>23.04.2025</td><td>27.04.2025</td></tr>
+<tr><td>20</td><td>Natürel sızma zeytinyağının kokusu mükemmel.</td><td>4</td><td>46</td><td>24.07.2025</td><td>27.07.2025</td></tr>
+
+</table>
+</div>
+</div>
+
 </body>
 </html>
