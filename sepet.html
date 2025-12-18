@@ -2,45 +2,184 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Sepet</title>
+<title>Sepetim</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:85%;
+    margin:40px auto;
+    background:#fff;
+    padding:20px;
+    border-radius:8px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.table-wrap{
+    max-height:400px;
+    overflow-y:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+th{
+    background:#222;
+    color:#fff;
+    position:sticky;
+    top:0;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+.qty-btn{
+    padding:4px 8px;
+    cursor:pointer;
+    border:none;
+    background:#ddd;
+    font-weight:bold;
+}
+
+.qty{
+    width:40px;
+    text-align:center;
+}
+
+.remove{
+    cursor:pointer;
+    color:red;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.total-box{
+    margin-top:20px;
+    text-align:right;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.checkout{
+    margin-top:15px;
+    text-align:right;
+}
+
+.checkout button{
+    padding:10px 20px;
+    border:none;
+    background:#222;
+    color:#fff;
+    cursor:pointer;
+    border-radius:5px;
+}
+</style>
 </head>
+
 <body>
 
-<h2>🛒 Sepetiniz</h2>
+<div class="container">
+<h2>Sepetim</h2>
 
-<table border="1" cellpadding="10">
+<div class="table-wrap">
+<table>
+<thead>
 <tr>
     <th>Ürün</th>
-    <th>Fiyat</th>
+    <th>Birim Fiyat (₺)</th>
+    <th>Adet</th>
+    <th>Ara Toplam (₺)</th>
+    <th>Sil</th>
 </tr>
-<tbody id="sepetTablo"></tbody>
+</thead>
+
+<tbody>
+<tr>
+    <td>Zeytinyağı 1L</td>
+    <td class="price">129.99</td>
+    <td>
+        <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+        <input class="qty" type="text" value="1" readonly>
+        <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+    </td>
+    <td class="subtotal">129.99</td>
+    <td><span class="remove" onclick="removeItem(this)">✖</span></td>
+</tr>
+
+<tr>
+    <td>Yeşil Zeytin 2kg</td>
+    <td class="price">259.99</td>
+    <td>
+        <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+        <input class="qty" type="text" value="2" readonly>
+        <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+    </td>
+    <td class="subtotal">519.98</td>
+    <td><span class="remove" onclick="removeItem(this)">✖</span></td>
+</tr>
+</tbody>
 </table>
+</div>
 
-<h3 id="toplam"></h3>
+<div class="total-box">
+    Toplam: <span id="total">0.00</span> ₺
+</div>
 
-<button onclick="odemeGec()">Ödemeye Geç</button>
+<div class="checkout">
+    <button onclick="alert('Ödeme sayfasına yönlendiriliyorsunuz (göstermelik)')">
+        Ödemeye Geç
+    </button>
+</div>
+
+</div>
 
 <script>
-let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
-let tablo = document.getElementById("sepetTablo");
-let toplam = 0;
+function changeQty(btn, change){
+    let row = btn.closest("tr");
+    let qtyInput = row.querySelector(".qty");
+    let price = parseFloat(row.querySelector(".price").innerText);
+    let qty = parseInt(qtyInput.value) + change;
 
-sepet.forEach(item => {
-    tablo.innerHTML += `
-        <tr>
-            <td>${item.urun}</td>
-            <td>${item.fiyat} ₺</td>
-        </tr>
-    `;
-    toplam += item.fiyat;
-});
+    if(qty < 1) return;
 
-document.getElementById("toplam").innerText =
-    "Toplam: " + toplam + " ₺";
+    qtyInput.value = qty;
+    row.querySelector(".subtotal").innerText = (price * qty).toFixed(2);
 
-function odemeGec() {
-    window.location.href = "odeme.html";
+    updateTotal();
 }
+
+function removeItem(btn){
+    btn.closest("tr").remove();
+    updateTotal();
+}
+
+function updateTotal(){
+    let total = 0;
+    document.querySelectorAll(".subtotal").forEach(item=>{
+        total += parseFloat(item.innerText);
+    });
+    document.getElementById("total").innerText = total.toFixed(2);
+}
+
+// Sayfa açılınca hesapla
+updateTotal();
 </script>
 
 </body>
