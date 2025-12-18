@@ -1,49 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="zeytin.png"> 
+<meta charset="UTF-8">
+<title>Kategoriler</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #222;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
 
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ZeytinETicaret</title>
-    <style>
-
-    
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #a6a4a4;
-            color: white;
-           
-        }
-        header img {
-            height: 150px;+
-        }
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            margin: 0;
-  
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>ZeytinETicaret</h1>
+<div class="container">
+<h2>Adres / Lokasyon Listesi</h2>
 
-</header>
-</head>
-<body>
-    
+<table>
+<tr>
+    <th>ID</th>
+    <th>Adı</th>
+    <th>Tanımı</th>
+    <th>Kayıt Tarihi</th>
+    <th>Güncelleme Tarihi</th>
+    <th>Üyeler ID</th>
+</tr>
+
+<tr><td>1</td><td>Ev</td><td>Kütahya</td><td>1.12.2025</td><td>2.12.2025</td><td>1</td></tr>
+<tr><td>4</td><td>İş</td><td>Jandarma Komutanlığı</td><td>12.03.2025</td><td>2.04.2025</td><td>24</td></tr>
+<tr><td>6</td><td>Bahçe</td><td>Domaniç Zeytinlik Alanı</td><td>11.03.2025</td><td>14.04.2025</td><td>29</td></tr>
+<tr><td>7</td><td>Üretim Bahçesi</td><td>Kütahya Tavşanlı Zeytinlik Bölgesi</td><td>19.04.2025</td><td>23.05.2025</td><td>33</td></tr>
+<tr><td>8</td><td>Paketleme</td><td>Kütahya Merkez Vakumlu Ambalaj Ünitesi</td><td>12.12.2025</td><td>13.12.2025</td><td>32</td></tr>
+<tr><td>9</td><td>Satış Noktası</td><td>Eskişehir Cad. No:45, Kütahya</td><td>21.03.2025</td><td>23.03.2025</td><td>7</td></tr>
+<tr><td>10</td><td>Online İade</td><td>Kütahya İade & Değişim Ofisi</td><td>1.01.2025</td><td>2.02.2025</td><td>11</td></tr>
+<tr><td>11</td><td>Depo</td><td>Tavşanlı OSB Zeytin Deposu</td><td>17.01.2025</td><td>19.01.2025</td><td>14</td></tr>
+<tr><td>12</td><td>Ev</td><td>Zafertepe Mah. No:12</td><td>25.05.2025</td><td>27.06.2025</td><td>15</td></tr>
+<tr><td>13</td><td>Ev</td><td>Balıklı Mah. No:3</td><td>12.01.2025</td><td>14.02.2025</td><td>15</td></tr>
+<tr><td>14</td><td>Ev</td><td>Ali Paşa Mah. No:8</td><td>12.12.2025</td><td>13.12.2025</td><td>27</td></tr>
+<tr><td>17</td><td>Ev</td><td>İstiklal Mah. Cumhuriyet Cad. No:101</td><td>1.05.2025</td><td>3.06.2025</td><td>28</td></tr>
+<tr><td>18</td><td>Üretim Bahçesi</td><td>Osmaniye Dereobası</td><td>3.03.2025</td><td>4.04.2025</td><td>24</td></tr>
+<tr><td>19</td><td>Üretim Bahçesi</td><td>Kadirli Savrun Çayı Yakası</td><td>11.11.2025</td><td>11.12.2025</td><td>16</td></tr>
+<tr><td>21</td><td>Üretim Bahçesi</td><td>Düziçi Haruniye Zeytinlikleri</td><td>4.04.2025</td><td>4.06.2025</td><td>27</td></tr>
+<tr><td>23</td><td>Üretim Bahçesi</td><td>Amanos Dağı Etekleri</td><td>21.01.2025</td><td>22.01.2025</td><td>7</td></tr>
+<tr><td>24</td><td>Üretim Bahçesi</td><td>Toprakkale Zeytinlik Köyü</td><td>21.03.2025</td><td>22.04.2025</td><td>11</td></tr>
+<tr><td>27</td><td>Ev</td><td>İstanbul Kadıköy Moda Mah.</td><td>11.03.2025</td><td>12.04.2025</td><td>32</td></tr>
+<tr><td>28</td><td>Şube</td><td>Antalya Muratpaşa Kaleiçi</td><td>1.01.2025</td><td>2.01.2025</td><td>32</td></tr>
+<tr><td>30</td><td>Fuar Standı</td><td>Gaziantep Ortadoğu Fuar Merkezi</td><td>11.01.2025</td><td>12.01.2025</td><td>16</td></tr>
+<tr><td>31</td><td>Bahçe</td><td>Bursa Mudanya Zeytinlik Köyü</td><td>1.01.2025</td><td>2.02.2025</td><td>7</td></tr>
+<tr><td>32</td><td>Ev</td><td>Adana Seyhan Baraj Yolu</td><td>3.03.2025</td><td>4.04.2025</td><td>11</td></tr>
+<tr><td>33</td><td>Şube</td><td>Trabzon Ortahisar Meydan</td><td>11.12.2025</td><td>23.12.2025</td><td>14</td></tr>
+<tr><td>34</td><td>Depo</td><td>Konya Karatay OSB</td><td>28.01.2025</td><td>27.02.2025</td><td>24</td></tr>
+
+</table>
+</div>
+
 </body>
 </html>
