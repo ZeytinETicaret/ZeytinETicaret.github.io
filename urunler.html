@@ -5,9 +5,9 @@
     <title>Sepet</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
 
         .sepet-container {
             width: 80%;
@@ -33,10 +33,13 @@
             text-align: center;
         }
 
-        th {
-            background: #222;
-            color: #fff;
-        }
+        th{
+    background: #222;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
 
         img {
             width: 60px;
@@ -82,8 +85,8 @@
             background: #21867a;
         }
         .table-wrap{
-    max-height: 500px;   /* Burayı geçince */
-    overflow-y: auto;    /* dikey scroll çıkar */
+    max-height: 500px;   /* bu yükseklikten sonra */
+    overflow-y: auto;    /* scroll çıkar */
 }
     </style>
 </head>
@@ -106,6 +109,7 @@
             <th>Güncelleme Tarihi</th>
             <th>Kategori ID</th>
             <th>Urun Resmi</th>
+            <th>Sepet</th>
         </tr>
 
         <tr>
@@ -121,6 +125,12 @@
             <td>12.02.2025</td>
             <td>13</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Zeytin Ezmesi', 123.49)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
         </tr>
             <tr>
@@ -136,6 +146,12 @@
             <td>12.02.2025</td>
             <td>1</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Kırma Yeşil Zeytin', 276,99)">
+    Sepete Ekle
+  </button>
+</td>
          
         </tr>
 
@@ -152,6 +168,12 @@
             <td>3.12.2025</td>
             <td>13</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Kahvaltılık Zeytin Sosu', 345,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
         
            <tr>
@@ -167,6 +189,12 @@
             <td>11.02.2025</td>
             <td>1</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Siyah Zeytin', 259,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
            <tr>
             <td>45</td>
@@ -181,6 +209,12 @@
             <td>13.07.2025</td>
             <td>1</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Yeşil Zeytin', 359,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
            <tr>
             <td>46</td>
@@ -195,6 +229,12 @@
             <td>11.12.2025</td>
             <td>12</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Natürel Sızma Yağ', 779,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
            <tr>
             <td>47</td>
@@ -209,6 +249,12 @@
             <td>12.12.2025</td>
             <td>13</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Biberli Zeytin Ezmesi', 199,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
            <tr>
             <td>51</td>
@@ -223,6 +269,12 @@
             <td>12.12.2025</td>
             <td>15</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('5L ZeytinYağı', 1299,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
            <tr>
             <td>52</td>
@@ -237,6 +289,12 @@
             <td>20.10.2025</td>
             <td>15</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('10Kg Zeytin<', 679,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
            <tr>
             <td>53</td>
@@ -251,6 +309,12 @@
             <td>2.02.2025</td>
             <td>4</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Zeytinli Arap Sabunu', 129,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
          <tr>
             <td>54</td>
@@ -265,6 +329,12 @@
             <td>13.01.2025</td>
             <td>14</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Zeytin Yağlı Şampuan', 89,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
 
         <tr>
@@ -280,6 +350,12 @@
             <td>4.04.2025</td>
             <td>14</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Zeytin Özlü Cilt Serumu', 49,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
         <tr>
             <td>56</td>
@@ -294,6 +370,12 @@
             <td>14.01.2025</td>
             <td>14</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Zeytin Yağlı Saç Kremi', 99,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
         <tr>
             <td>57</td>
@@ -308,6 +390,12 @@
             <td>30.03.2025</td>
             <td>12</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Organik Zeytin Yağı', 999,99)">
+    Sepete Ekle
+  </button>
+</td>
         </tr>
         <tr>
         <td>59</td>
@@ -322,6 +410,12 @@
             <td>27.06.2025</td>
             <td>1</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Gemlik Zeytini', 129,99)">
+    Sepete Ekle
+  </button>
+</td>
             </tr>
             <td>60</td>
             <td>Dolma Zeytin</td>
@@ -335,6 +429,12 @@
             <td>5.05.2025</td>
             <td>1</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Dolma Zeytin', 89,99)">
+    Sepete Ekle
+  </button>
+</td>
             <tr>
             <td>61</td>
             <td>Soğuk Sıkma Zeytinyağı</td>
@@ -348,6 +448,12 @@
             <td>8.08.2025</td>
             <td>12</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Soğuk Sıkma Zeytinyağı', 459,99)">
+    Sepete Ekle
+  </button>
+</td>
             </tr>
             <tr>
             <td>62</td>
@@ -362,6 +468,12 @@
             <td>16.10.2025</td>
             <td>13</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Kahvaltılık Zeytin Sos', 123,99)">
+    Sepete Ekle
+  </button>
+</td>
             </tr>
                <tr>
             <td>63</td>
@@ -376,6 +488,12 @@
             <td>19.12.2025</td>
             <td>14</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('ZeytinYağlı Yüz Kremi', 39,99)">
+    Sepete Ekle
+  </button>
+</td>
             </tr>
             <tr>
             <td>64</td>
@@ -390,6 +508,12 @@
             <td>13.12.2025</td>
             <td>4</td>
             <td><img src="urun1.jpeg"></td>
+            <td>
+  <button class="ode-btn"
+    onclick="sepeteEkle('Zeytin Yaprağı Ekstresi', 109,99)">
+    Sepete Ekle
+  </button>
+</td>
             </tr>
 
     
@@ -397,11 +521,37 @@
         
     </table>
 
-    <div class="toplam-alan">
-        <strong>Genel Toplam: 1297 ₺</strong><br>
-        <button class="ode-btn">Ödemeye Geç</button>
-    </div>
-</div>
+    <button class="ode-btn" onclick="odemeGec()">
+    Ödemeye Geç
+</button>
+
+<script>
+function odemeGec() {
+    window.location.href = "odeme.html";
+    window.location.href = "sepet.html";
+}
+</script>
+<script>
+function sepeteEkle(urunAdi, fiyat) {
+    let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+
+    // aynı ürün varsa adet artır
+    let bulunan = sepet.find(u => u.urun === urunAdi);
+    if (bulunan) {
+        bulunan.adet++;
+    } else {
+        sepet.push({ urun: urunAdi, fiyat: fiyat, adet: 1 });
+    }
+
+    localStorage.setItem("sepet", JSON.stringify(sepet));
+    alert("✅ Ürün sepete eklendi");
+}
+
+function odemeGec() {
+    window.location.href = "sepet.html";
+}
+</script>
+
 
 </body>
 </html>
