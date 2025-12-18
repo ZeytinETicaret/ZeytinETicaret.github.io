@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Ödeme</title>
+</head>
+<body>
+
+<h2>💳 Ödeme (Demo)</h2>
+
+<p>Bu sayfa tanıtım amaçlıdır.</p>
+
+<input placeholder="Kart Sahibi (Demo)"><br><br>
+<input placeholder="Kart No (Demo)"><br><br>
+
+<button onclick="tamamla()">Ödemeyi Tamamla</button>
+
+<script>
+function tamamla() {
+    alert("✅ Ödeme alındı (DEMO)");
+    localStorage.removeItem("sepet");
+    window.location.href = "tamamla.html";
+}
+</script>
+
+</body>
+</html>
