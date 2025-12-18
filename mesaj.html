@@ -1,49 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="zeytin.png"> 
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ZeytinETicaret</title>
+    <title>Mesajlar</title>
     <style>
-
-    
-
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            background: #f5f5f5;
         }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #a6a4a4;
-            color: white;
-           
+
+        .container {
+            width: 90%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
         }
-        header img {
-            height: 150px;+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            margin: 0;
-  
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ZeytinETicaret</h1>
+<div class="container">
+    <h2>Mesaj Listesi</h2>
 
-</header>
-</head>
-<body>
-    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Konu</th>
+            <th>Okundu Mu</th>
+            <th>Yazılma Tarihi</th>
+            <th>Güncellenme Tarihi</th>
+            <th>Mesaj Gönderen Üye ID</th>
+            <th>Mesaj Alan Üye ID</th>
+        </tr>
+
+        <tr><td>1</td><td>Sipariş</td><td>DOĞRU</td><td>11.11.2025 00:00</td><td>12.12.2025 00:00</td><td>1</td><td>3</td></tr>
+        <tr><td>3</td><td>Tavsiye</td><td>DOĞRU</td><td>11.11.2025 00:00</td><td>10.10.2025 00:00</td><td>1</td><td>3</td></tr>
+        <tr><td>4</td><td>Toplu Alım</td><td>YANLIŞ</td><td>3.11.2025 00:00</td><td>4.12.2025 00:00</td><td>4</td><td>4</td></tr>
+        <tr><td>5</td><td>Zeytinyağı fiyat</td><td>DOĞRU</td><td>13.01.2025 00:00</td><td>17.02.2025 00:00</td><td>27</td><td>28</td></tr>
+        <tr><td>6</td><td>Salamura önerisi</td><td>YANLIŞ</td><td>1.01.2025 00:00</td><td>2.02.2025 00:00</td><td>33</td><td>32</td></tr>
+        <tr><td>7</td><td>Yeni ürün isteği</td><td>DOĞRU</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>16</td><td>27</td></tr>
+        <tr><td>8</td><td>Kampanya Talebi</td><td>DOĞRU</td><td>11.05.2025 00:00</td><td>12.06.2025 00:00</td><td>7</td><td>33</td></tr>
+        <tr><td>9</td><td>Kargo Gecikmesi</td><td>DOĞRU</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>29</td><td>6</td></tr>
+        <tr><td>10</td><td>Zeytin Fiyat</td><td>YANLIŞ</td><td>11.11.2025 00:00</td><td>12.12.2025 00:00</td><td>33</td><td>1</td></tr>
+        <tr><td>11</td><td>Zeytin Ezmesi Acılığı</td><td>DOĞRU</td><td>10.10.2025 00:00</td><td>13.10.2025 00:00</td><td>1</td><td>27</td></tr>
+        <tr><td>12</td><td>Siyah Zeytin Toplu Alım</td><td>DOĞRU</td><td>1.01.2025 00:00</td><td>2.02.2025 00:00</td><td>16</td><td>4</td></tr>
+        <tr><td>13</td><td>Kırma Yeşil Zeytin Stok</td><td>YANLIŞ</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>24</td><td>28</td></tr>
+        <tr><td>14</td><td>Yeşil Zeytin Yıldız Puanı</td><td>DOĞRU</td><td>12.12.2025 00:00</td><td>17.12.2025 00:00</td><td>15</td><td>29</td></tr>
+        <tr><td>15</td><td>Zeytin Ezmesi Çok Tuzlu</td><td>DOĞRU</td><td>19.11.2025 00:00</td><td>20.11.2025 00:00</td><td>11</td><td>29</td></tr>
+        <tr><td>16</td><td>Zeytin Ezmesi Restoran İş Birliği</td><td>DOĞRU</td><td>20.10.2025 00:00</td><td>11.11.2025 00:00</td><td>7</td><td>15</td></tr>
+        <tr><td>18</td><td>Siyah Zeytin İhracat Talebi</td><td>YANLIŞ</td><td>29.11.2025 00:00</td><td>30.11.2025 00:00</td><td>16</td><td>18</td></tr>
+        <tr><td>19</td><td>Kırma Zeytin Sağlık Araştırması</td><td>DOĞRU</td><td>19.09.2025 00:00</td><td>27.11.2025 00:00</td><td>14</td><td>15</td></tr>
+        <tr><td>20</td><td>Siyah Zeytin Toplu Alım Grubu</td><td>DOĞRU</td><td>11.12.2025 00:00</td><td>12.12.2025 00:00</td><td>7</td><td>14</td></tr>
+        <tr><td>21</td><td>Kahvaltılık Zeytin Tadım Yorumu</td><td>YANLIŞ</td><td>19.05.2025 00:00</td><td>23.06.2025 00:00</td><td>1</td><td>27</td></tr>
+        <tr><td>22</td><td>Kırma Zeytin Sağlık Tavsiyesi</td><td>DOĞRU</td><td>1.01.2025 00:00</td><td>12.01.2025 00:00</td><td>11</td><td>3</td></tr>
+        <tr><td>23</td><td>Yeşil Zeytin Kampanya Paylaşımı</td><td>DOĞRU</td><td>19.08.2025 00:00</td><td>29.09.2025 00:00</td><td>33</td><td>16</td></tr>
+        <tr><td>24</td><td>Siyah Zeytin Fiyat Karşılaştırılması</td><td>DOĞRU</td><td>11.11.2025 00:00</td><td>12.11.2025 00:00</td><td>15</td><td>4</td></tr>
+    </table>
+</div>
+
 </body>
 </html>
