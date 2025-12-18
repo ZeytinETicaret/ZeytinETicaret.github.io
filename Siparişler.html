@@ -1,49 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="zeytin.png"> 
-
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>ZeytinETicaret</title>
+    <title>Siparişler</title>
     <style>
-
-    
-
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            background: #f5f5f5;
         }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: #a6a4a4;
-            color: white;
-           
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
         }
-        header img {
-            height: 150px;+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px;
-            letter-spacing: 1.5px;
-            margin: 0;
-  
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ZeytinETicaret</h1>
+<div class="container">
+    <h2>Sipariş Listesi</h2>
 
-</header>
-</head>
-<body>
-    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Kayıt Tarihi</th>
+            <th>Numarası</th>
+            <th>Durumu</th>
+            <th>Üyeler ID</th>
+            <th>Adres ID</th>
+            <th>Güncellenme Tarihi</th>
+            <th>Tanımı</th>
+        </tr>
+
+        <tr><td>6</td><td>10.11.2025 00:00</td><td>2</td><td>hazırlanıyor</td><td>5</td><td>1</td><td>11.12.2025 00:00</td><td>-</td></tr>
+        <tr><td>7</td><td>10.10.2025 00:00</td><td>3</td><td>sipariş alındı</td><td>6</td><td>4</td><td>11.11.2025 00:00</td><td>-</td></tr>
+        <tr><td>8</td><td>9.09.2025 00:00</td><td>4</td><td>sipariş alındı</td><td>7</td><td>1</td><td>9.11.2025 00:00</td><td>-</td></tr>
+        <tr><td>9</td><td>19.08.2025 00:00</td><td>5</td><td>kargoya verildi</td><td>14</td><td>4</td><td>21.09.2025 00:00</td><td>-</td></tr>
+        <tr><td>10</td><td>21.03.2025 00:00</td><td>5</td><td>iptal edildi</td><td>33</td><td>11</td><td>23.04.2025 00:00</td><td>-</td></tr>
+        <tr><td>11</td><td>1.01.2025 00:00</td><td>6</td><td>teslim edildi</td><td>32</td><td>10</td><td>2.01.2025 00:00</td><td>-</td></tr>
+        <tr><td>12</td><td>2.01.2025 00:00</td><td>7</td><td>paketleniyor</td><td>15</td><td>13</td><td>7.01.2025 00:00</td><td>-</td></tr>
+        <tr><td>13</td><td>19.05.2025 00:00</td><td>8</td><td>fuar teslimatı</td><td>18</td><td>30</td><td>29.05.2025 00:00</td><td>-</td></tr>
+        <tr><td>14</td><td>21.06.2025 00:00</td><td>9</td><td>adres doğrulama bekleniyor</td><td>29</td><td>30</td><td>29.06.2025 00:00</td><td>-</td></tr>
+        <tr><td>15</td><td>11.11.2025 00:00</td><td>10</td><td>soğuk depoda hazır</td><td>5</td><td>10</td><td>21.11.2025 00:00</td><td>-</td></tr>
+        <tr><td>16</td><td>9.09.2025 00:00</td><td>11</td><td>toplu gönderim planlandı</td><td>7</td><td>1</td><td>17.09.2025 00:00</td><td>-</td></tr>
+        <tr><td>17</td><td>11.02.2025 00:00</td><td>12</td><td>müşteri teyidi bekleniyor</td><td>14</td><td>17</td><td>17.02.2025 00:00</td><td>-</td></tr>
+        <tr><td>19</td><td>16.03.2025 00:00</td><td>13</td><td>bahçeden çıkıyor</td><td>6</td><td>34</td><td>26.03.2025 00:00</td><td>-</td></tr>
+        <tr><td>20</td><td>18.06.2025 00:00</td><td>14</td><td>iade sürecinde</td><td>24</td><td>12</td><td>19.06.2025 00:00</td><td>-</td></tr>
+        <tr><td>21</td><td>19.09.2025 00:00</td><td>15</td><td>müşteri teyidi bekleniyor</td><td>29</td><td>31</td><td>23.09.2025 00:00</td><td>-</td></tr>
+    </table>
+</div>
+
 </body>
 </html>
