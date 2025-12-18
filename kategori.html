@@ -42,6 +42,10 @@ th {
 tr:nth-child(even) {
     background: #f2f2f2;
 }
+.table-wrap{
+    max-height: 500px;   /* Burayı geçince */
+    overflow-y: auto;    /* dikey scroll çıkar */
+}
 
 
 </style>
@@ -51,7 +55,7 @@ tr:nth-child(even) {
 
 <div class="container">
     <h2>Kategori Listesi</h2>
-
+<div class="table-wrap">
     <table>
         <tr>
             <th>ID</th>
@@ -105,4 +109,3 @@ tr:nth-child(even) {
 
 </body>
 </html>
-
