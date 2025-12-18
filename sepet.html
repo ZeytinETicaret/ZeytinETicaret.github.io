@@ -2,30 +2,20 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Sepetim</title>
+<title>Sepet</title>
 
 <style>
 body{
     font-family: Arial, sans-serif;
-    background:#f4f4f4;
+    background:#f5f5f5;
 }
 
 .container{
-    width:85%;
+    width:80%;
     margin:40px auto;
     background:#fff;
     padding:20px;
-    border-radius:8px;
-}
-
-h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.table-wrap{
-    max-height:400px;
-    overflow-y:auto;
+    border-radius:10px;
 }
 
 table{
@@ -33,71 +23,39 @@ table{
     border-collapse:collapse;
 }
 
-th, td{
+th,td{
     padding:10px;
-    text-align:center;
     border-bottom:1px solid #ddd;
+    text-align:center;
 }
 
 th{
     background:#222;
     color:#fff;
-    position:sticky;
-    top:0;
 }
 
-tr:nth-child(even){
-    background:#f9f9f9;
-}
-
-.qty-btn{
-    padding:4px 8px;
-    cursor:pointer;
-    border:none;
-    background:#ddd;
-    font-weight:bold;
-}
-
-.qty{
-    width:40px;
+input{
+    width:60px;
     text-align:center;
 }
 
-.remove{
+.sil{
+    background:#e63946;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:4px;
     cursor:pointer;
-    color:red;
-    font-weight:bold;
-    font-size:18px;
 }
 
-.total-box{
+.ode{
     margin-top:20px;
-    text-align:right;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.checkout{
-    margin-top:15px;
-    text-align:right;
-}
-
-.checkout-btn{
-    display: block;
-    margin: 25px auto 0;
-    padding: 14px 40px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(135deg, #111, #333);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all .3s ease;
-    box-shadow: 0 6px 15px rgba(0,0,0,.3);
-}
-.checkout-btn:active{
-    transform: scale(0.97);
+    padding:12px 20px;
+    background:#2a9d8f;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
 }
 </style>
 </head>
@@ -105,99 +63,79 @@ tr:nth-child(even){
 <body>
 
 <div class="container">
-<h2>Sepetim</h2>
+<h2 style="text-align:center;">Sepet</h2>
 
-<div class="table-wrap">
 <table>
 <thead>
 <tr>
-    <th>Ürün</th>
-    <th>Birim Fiyat (₺)</th>
-    <th>Adet</th>
-    <th>Ara Toplam (₺)</th>
-    <th>Sil</th>
+<th>Ürün</th>
+<th>Fiyat</th>
+<th>Adet</th>
+<th>Toplam</th>
+<th>Sil</th>
 </tr>
 </thead>
 
-<tbody>
-<tr>
-    <td>Zeytinyağı 1L</td>
-    <td class="price">129.99</td>
-    <td>
-        <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
-        <input class="qty" type="text" value="1" readonly>
-        <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-    </td>
-    <td class="subtotal">129.99</td>
-    <td><span class="remove" onclick="removeItem(this)">✖</span></td>
-</tr>
-
-<tr>
-    <td>Yeşil Zeytin 2kg</td>
-    <td class="price">259.99</td>
-    <td>
-        <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
-        <input class="qty" type="text" value="2" readonly>
-        <button class="qty-btn" onclick="changeQty(this,1)">+</button>
-    </td>
-    <td class="subtotal">519.98</td>
-    <td><span class="remove" onclick="removeItem(this)">✖</span></td>
-</tr>
+<tbody id="sepetBody">
+<!-- BURASI BOŞ → JS dolduracak -->
 </tbody>
 </table>
-</div>
 
-<div class="total-box">
-    Toplam: <span id="total">0.00</span> ₺
-</div>
+<h3 id="genelToplam" style="text-align:right;">Toplam: 0 ₺</h3>
 
-<button class="checkout-btn" onclick="odemeGec()">
-    💳 Ödemeye Geç
-</button>
-</div>
-
+<button class="ode" onclick="odeme()">Ödemeye Geç</button>
 </div>
 
 <script>
-    function odemeGec(){
-    let toplam = document.getElementById("total").innerText;
+let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+let body = document.getElementById("sepetBody");
 
-    if(toplam == "0.00"){
-        alert("❌ Sepet boş, ödeme yapılamaz!");
+function goster(){
+    body.innerHTML="";
+    let toplam=0;
+
+    sepet.forEach((u,i)=>{
+        let araToplam = u.fiyat * u.adet;
+        toplam += araToplam;
+
+        body.innerHTML += `
+        <tr>
+            <td>${u.ad}</td>
+            <td>${u.fiyat} ₺</td>
+            <td>
+                <input type="number" min="1" value="${u.adet}"
+                onchange="adetDegistir(${i},this.value)">
+            </td>
+            <td>${araToplam.toFixed(2)} ₺</td>
+            <td><button class="sil" onclick="sil(${i})">Sil</button></td>
+        </tr>`;
+    });
+
+    document.getElementById("genelToplam").innerText =
+    "Toplam: " + toplam.toFixed(2) + " ₺";
+
+    localStorage.setItem("sepet", JSON.stringify(sepet));
+}
+
+function adetDegistir(i,adet){
+    sepet[i].adet = Number(adet);
+    goster();
+}
+
+function sil(i){
+    sepet.splice(i,1);
+    goster();
+}
+
+function odeme(){
+    if(sepet.length === 0){
+        alert("Sepet boş!");
         return;
     }
-
     window.location.href = "odeme.html";
 }
-function changeQty(btn, change){
-    let row = btn.closest("tr");
-    let qtyInput = row.querySelector(".qty");
-    let price = parseFloat(row.querySelector(".price").innerText);
-    let qty = parseInt(qtyInput.value) + change;
 
-    if(qty < 1) return;
-
-    qtyInput.value = qty;
-    row.querySelector(".subtotal").innerText = (price * qty).toFixed(2);
-
-    updateTotal();
-}
-
-function removeItem(btn){
-    btn.closest("tr").remove();
-    updateTotal();
-}
-
-function updateTotal(){
-    let total = 0;
-    document.querySelectorAll(".subtotal").forEach(item=>{
-        total += parseFloat(item.innerText);
-    });
-    document.getElementById("total").innerText = total.toFixed(2);
-}
-
-// Sayfa açılınca hesapla
-updateTotal();
+goster();
 </script>
 
 </body>
